@@ -15,12 +15,15 @@ clientid = "MQTT Client ID From Dashboard"
 mqttc.username_pw_set(username, password=password)
 mqttc.connect("mqtt.mydevices.com", port=1883, keepalive=60)
 """
-username = "pi" # While noty using Cayenne credentials
-#password = "raspberry"
-clientid = "101" 
+
+username = "pi"
+clientid = "dht11" 
 
 # Start mqtt client
 mqttc = mqtt.Client(client_id=clientid)
+mqttc.connect("localhost")
+
+
 mqttc.loop_start()
 
 # Create the route for the topics
