@@ -1,0 +1,1 @@
+/home/pi/Adafruit_Python_DHT/examples/AdafruitDHT.py
