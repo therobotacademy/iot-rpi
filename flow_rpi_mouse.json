@@ -1,5 +1,26 @@
 [
     {
+        "id": "f74aaa83.7f5928",
+        "type": "tab",
+        "label": "1.1 Pi Mouse",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "db02ed97.aac39",
+        "type": "rpi-mouse",
+        "z": "f74aaa83.7f5928",
+        "name": "",
+        "butt": "1",
+        "x": 359.5,
+        "y": 191,
+        "wires": [
+            [
+                "bf5c6045.619388"
+            ]
+        ]
+    },
+    {
         "id": "bf5c6045.619388",
         "type": "debug",
         "z": "f74aaa83.7f5928",

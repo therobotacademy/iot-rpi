@@ -1,0 +1,230 @@
+[
+    {
+        "id": "ee1d9004.96dcf",
+        "type": "tab",
+        "label": "1.3 Lectura DHT11",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "117482e3.b92ecd",
+        "type": "mqtt in",
+        "z": "ee1d9004.96dcf",
+        "name": "temperatura",
+        "topic": "v1/pi/things/dht11/data/1",
+        "qos": "2",
+        "broker": "MQTT.Localhost",
+        "x": 170,
+        "y": 242,
+        "wires": [
+            [
+                "3c94d350.7a8fec",
+                "14eabb82.c3dd74",
+                "87246971.ddfd"
+            ]
+        ]
+    },
+    {
+        "id": "e5125d65.e4e5d",
+        "type": "mqtt in",
+        "z": "ee1d9004.96dcf",
+        "name": "humedad",
+        "topic": "v1/pi/things/dht11/data/2",
+        "qos": "2",
+        "broker": "MQTT.Localhost",
+        "x": 167,
+        "y": 337,
+        "wires": [
+            [
+                "1b4bccaa.da3e2b",
+                "8cf8d627.def218",
+                "87246971.ddfd"
+            ]
+        ]
+    },
+    {
+        "id": "14eabb82.c3dd74",
+        "type": "ui_gauge",
+        "z": "ee1d9004.96dcf",
+        "name": "Temperatura",
+        "group": "17da84dd.91d51b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 391,
+        "y": 221.99998474121094,
+        "wires": []
+    },
+    {
+        "id": "8cf8d627.def218",
+        "type": "ui_gauge",
+        "z": "ee1d9004.96dcf",
+        "name": "",
+        "group": "17da84dd.91d51b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humedad relativa",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 410.5,
+        "y": 335.4000244140625,
+        "wires": []
+    },
+    {
+        "id": "3c94d350.7a8fec",
+        "type": "ui_chart",
+        "z": "ee1d9004.96dcf",
+        "name": "",
+        "group": "17da84dd.91d51b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "temperatura",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "12",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 387.5,
+        "y": 267,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1b4bccaa.da3e2b",
+        "type": "ui_chart",
+        "z": "ee1d9004.96dcf",
+        "name": "",
+        "group": "17da84dd.91d51b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "humedad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "12",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 383.5,
+        "y": 385,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "87246971.ddfd",
+        "type": "debug",
+        "z": "ee1d9004.96dcf",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 434.5,
+        "y": 152.99998474121094,
+        "wires": []
+    },
+    {
+        "id": "MQTT.Localhost",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "15",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "17da84dd.91d51b",
+        "type": "ui_group",
+        "z": "",
+        "name": "DHT11",
+        "tab": "11d8e3c3.2888ac",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "11d8e3c3.2888ac",
+        "type": "ui_tab",
+        "z": "",
+        "name": "autoclave",
+        "icon": "dashboard",
+        "order": 1
+    }
+]
