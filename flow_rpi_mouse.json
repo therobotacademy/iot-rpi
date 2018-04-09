@@ -1,0 +1,14 @@
+[
+    {
+        "id": "bf5c6045.619388",
+        "type": "debug",
+        "z": "f74aaa83.7f5928",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 626,
+        "y": 218,
+        "wires": []
+    }
+]
